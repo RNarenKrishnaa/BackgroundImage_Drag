@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BackGroundImage" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,83 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fFe-Tz-frY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="590"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7hn-S0-IEp">
+                                <rect key="frame" x="200" y="609" width="160" height="40"/>
+                                <color key="backgroundColor" red="0.69464278170936633" green="0.68486783719108268" blue="0.97117875647668395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Ess-SM-XdN"/>
+                                    <constraint firstAttribute="height" constant="40" id="OCk-AU-STx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                <state key="normal" title="Open Camera ">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnOpenCameraClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yV6-W4-rik"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puH-8J-Ajc">
+                                <rect key="frame" x="16" y="609" width="160" height="40"/>
+                                <color key="backgroundColor" red="0.66581040333933872" green="0.64630005958354497" blue="0.97117875647668395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NEo-UP-bMV"/>
+                                    <constraint firstAttribute="width" constant="160" id="Y58-AE-I0a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <state key="normal" title="Open Photo Library">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPhotoLibraryClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hYz-l4-UkO"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MB0-v9-mgA">
+                                <rect key="frame" x="99" y="222" width="176" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="ugd-FW-Xdx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open Camera for Background Image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zG-CW-b3h">
+                                <rect key="frame" x="99" y="222" width="176" height="147"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="7hn-S0-IEp" secondAttribute="trailing" constant="-1" id="4RB-Xx-O8C"/>
+                            <constraint firstItem="fFe-Tz-frY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7ck-vc-Vaa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7hn-S0-IEp" secondAttribute="bottom" constant="18" id="8a4-DS-RU0"/>
+                            <constraint firstItem="6zG-CW-b3h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="83" id="ACE-aZ-GsC"/>
+                            <constraint firstItem="fFe-Tz-frY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Lfs-Yy-1kV"/>
+                            <constraint firstAttribute="trailing" secondItem="fFe-Tz-frY" secondAttribute="trailing" id="TyV-lP-Tow"/>
+                            <constraint firstItem="6zG-CW-b3h" firstAttribute="trailing" secondItem="MB0-v9-mgA" secondAttribute="trailing" id="YvB-3Y-ZTv"/>
+                            <constraint firstItem="7hn-S0-IEp" firstAttribute="leading" secondItem="puH-8J-Ajc" secondAttribute="trailing" constant="24" id="Zu8-Y1-9xS"/>
+                            <constraint firstItem="6zG-CW-b3h" firstAttribute="centerY" secondItem="fFe-Tz-frY" secondAttribute="centerY" id="bCs-Oo-Ird"/>
+                            <constraint firstItem="6zG-CW-b3h" firstAttribute="leading" secondItem="MB0-v9-mgA" secondAttribute="leading" id="cCV-An-6gw"/>
+                            <constraint firstItem="MB0-v9-mgA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="202" id="iSS-8g-38q"/>
+                            <constraint firstItem="6zG-CW-b3h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="202" id="j16-94-iVb"/>
+                            <constraint firstItem="6zG-CW-b3h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rLS-xp-IOj"/>
+                            <constraint firstItem="puH-8J-Ajc" firstAttribute="top" secondItem="fFe-Tz-frY" secondAttribute="bottom" constant="19" id="wFO-tt-fY1"/>
+                            <constraint firstItem="7hn-S0-IEp" firstAttribute="top" secondItem="fFe-Tz-frY" secondAttribute="bottom" constant="19" id="yMv-XV-j60"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ImgViewForBackGround" destination="fFe-Tz-frY" id="tm3-EV-but"/>
+                        <outlet property="lblForInstruction" destination="6zG-CW-b3h" id="kKM-9b-PZe"/>
+                        <outlet property="libraryImgViewForDrag" destination="MB0-v9-mgA" id="jS8-tI-q4L"/>
+                        <outlet property="openCamera" destination="7hn-S0-IEp" id="J09-1c-5H8"/>
+                        <outlet property="openPhotoLibrary" destination="puH-8J-Ajc" id="JJf-DN-xH5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
